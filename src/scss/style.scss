@@ -1,0 +1,11 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'mixins';
+@import 'vars';
+
+h1{
+    color: rgb(255, 0, 43);
+}
+
+@import 'media';
