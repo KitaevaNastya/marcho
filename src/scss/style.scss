@@ -1,11 +1,75 @@
 @import 'vars';
 @import 'fonts';
-@import 'reset';
 @import 'mixins';
-@import 'vars';
+@import 'reset';
+@import 'media';
 
-h1{
-    color: rgb(255, 0, 43);
+body{
+    color: $defaul;
+    font-size: 16px;
+    @extend %quicksand-400
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
-@import 'media';
+.header{
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.menu{
+    &__list{
+        display: flex;
+        &-item + &-item{
+            padding-left: 35px;
+        }
+        &-link{
+            color: $title;
+            text-transform: uppercase;
+            text-decoration: none;
+            &:hover{
+                @extend %quicksand-500;
+                color: $accent;
+                border-bottom: 1px solid $accent;
+                transition: all .3s;
+            }
+            &--active{
+                @extend %quicksand-500;
+                color: $accent;
+                border-bottom: 1px solid $accent;
+            }
+        }
+    }
+}
+
+.user-nav{
+    display: flex;
+    &__link{
+        position: relative;
+    }
+    &__link + &__link{
+        padding-left: 25px;
+    }
+    &__num{
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: $accent;
+        top: -9px;
+        right: -14px;
+        font-size: 12px; 
+        line-height: 20px;
+        color: #fff;
+        text-align: center;
+    }
+    
+}
