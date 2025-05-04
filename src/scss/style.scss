@@ -4,15 +4,30 @@
 @import 'reset';
 @import 'media';
 
+html, 
+body{
+    height: 100%;
+}
+
 body{
     color: $defaul;
     font-size: 16px;
-    @extend %quicksand-400
+    line-height: 26px;
+    @extend %quicksand-500;
+    display: flex;
+    flex-direction: column;
+}
+
+.main{
+    flex-grow: 1;
 }
 .container{
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
+}
+a{
+    color: $defaul;
 }
 
 .header{
@@ -72,4 +87,106 @@ body{
         text-align: center;
     }
     
+
+}
+
+.footer{
+    background-color: $bg;
+    &-top{
+        padding: 70px 0 40px;
+        border-bottom: 1px solid #ececec;
+        display: flex;
+        &__contact{
+            width: 250px;
+            margin-right: 50px;
+        }
+        &__nav{
+            width: 170px;
+            margin-right: 30px;
+        }
+        &__item{
+  
+            &-form{
+                max-width: 470px;
+            }
+        }
+        &__logo{
+            margin-bottom: 33px;
+            display: block;
+        }
+        &__adress,
+        &__email,
+        &__phone{
+            display: block;
+            margin-bottom: 10px;
+        }
+        &__social{
+            &-list{
+                display: flex;
+                align-items: center;
+                margin-top: 30px;
+            }
+            &-item + &-item{
+                padding-left: 18px;
+            }
+            &-link{
+                transition: all .3s;
+                path{
+                    fill: $defaul
+                }
+                &:hover{
+                    path{
+                        fill: $accent;
+                    }
+                }
+            }
+        }
+        &__title{
+            color: $title;
+            @extend %roboto-500;
+            margin-bottom: 43px;
+            font-size: 22px;
+            line-height: 1;
+        }
+        &__link{
+            margin-bottom: 10px;
+            display: block;
+        }
+        &__text{
+            margin-bottom: 25px;
+        }
+        &__form-input{
+            background-color: #FFF;
+            max-width: 320px;
+            width:100%;
+            border: none;
+            padding: 12px;
+            box-shadow: 0 7px 20px 0 rgba(192, 192, 192, 0.3);
+            &::placeholder{
+                color: $defaul;
+                font-size: 16px;
+            }
+        }
+        &__form-btn{
+            border: none;
+            background-color: $accent;
+            color:#fff;
+            text-transform: uppercase;
+            padding: 12px 26px;
+            box-shadow: 0 7px 20px 0 rgba(255, 17, 48, 0.3);
+            cursor: pointer;
+        }
+    }
+    &-bottom{
+        height: 75px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-style: 12px;
+        &__accept-img{
+            display: inline;
+            margin-left: 25px;
+            vertical-align: middle;
+        }
+    }
 }
