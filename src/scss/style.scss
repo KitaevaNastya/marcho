@@ -47,11 +47,13 @@ a{
             padding-left: 35px;
         }
         &-link{
+            padding-bottom: 0 2px 1px;
             color: $title;
+            @extend %roboto-400;
             text-transform: uppercase;
             text-decoration: none;
             &:hover{
-                @extend %quicksand-500;
+                @extend %roboto-700;
                 color: $accent;
                 border-bottom: 1px solid $accent;
                 transition: all .3s;
