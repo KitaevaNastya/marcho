@@ -4,6 +4,7 @@
     "description": "new",
     "author": "Nastya",
     "devDependencies": {
+        "@fancyapps/fancybox": "^3.5.7",
         "browser-sync": "^3.0.3",
         "del": "^6.0.0",
         "gulp": "^5.0.0",
