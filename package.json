@@ -22,6 +22,7 @@
     },
     "dependencies": {
         "panini": "^1.7.2",
+        "slick-carousel": "^1.8.1",
         "update-browserslist-db": "^1.1.3"
     },
     "main": "gulpfile.js",

@@ -25,7 +25,7 @@ const path = {
     build: { 
         html: distPath,
         css: distPath + "/css/",
-        js: distPath + "/",
+        js: distPath + "/js/",
         images: distPath + "/images/",
         fonts: distPath + "/fonts/"
     },

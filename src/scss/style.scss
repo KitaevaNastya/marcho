@@ -89,7 +89,7 @@ a{
         text-align: center;
     }
     
-
+    
 }
 
 .footer{
@@ -107,7 +107,7 @@ a{
             margin-right: 30px;
         }
         &__item{
-  
+            
             &-form{
                 max-width: 470px;
             }
@@ -170,13 +170,8 @@ a{
             }
         }
         &__form-btn{
-            border: none;
-            background-color: $accent;
-            color:#fff;
-            text-transform: uppercase;
-            padding: 12px 26px;
-            box-shadow: 0 7px 20px 0 rgba(255, 17, 48, 0.3);
-            cursor: pointer;
+            @extend %btn;
+
         }
     }
     &-bottom{
@@ -192,3 +187,5 @@ a{
         }
     }
 }
+
+@import 'carousel';
