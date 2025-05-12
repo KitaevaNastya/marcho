@@ -3,6 +3,7 @@
 @import 'mixins';
 @import 'reset';
 @import 'media';
+@import 'rateyo';
 
 html, 
 body{
@@ -255,6 +256,113 @@ a{
     }
     &__link{
         @extend %btn
+    }
+}
+
+.product{
+    padding: 105px 0 120px;
+    text-align: center;
+    &__items{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 45px 30px;
+    }
+    &__link{
+        text-transform: uppercase;
+        color: $title;
+        display: inline-block;
+        border: 1px solid $accent;
+        padding: 14px 27px;
+        margin-top: 55px;
+    }
+    &-item{
+        max-width: 370px;
+        &__img-box{
+            position: relative;
+            height: 370px;
+            overflow: hidden;
+            margin-bottom: 25px;
+        }
+        &__link-box{
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 50px;
+            width: 220px;
+            background-color: #fff;
+            height: 50px;
+            margin: 0 auto;
+            border-radius: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            transform: translateY(300%);
+            transition: all .3s;
+        }
+        &:hover{
+            .product-item__link-box{
+                transform: translateY(0);
+            }
+        }
+        &__link--line::before,
+        &__link--line::after{
+            content: '';
+            position: absolute;
+            background-color:#fff;
+            width: 1px;
+            height: 30px;
+            background-color: #ececec;
+            top: 10px;
+        }
+        &__link{
+            display: inherit;
+            path{
+                transition: all .3s;
+            }
+            :hover{
+                path{
+                    fill: $accent;
+                }
+            }
+            &--line::before{
+            left: 70px;
+            }
+            &--line::after{
+            right: 70px;
+            }
+        }
+        &__images{
+            object-fit: cover;
+        }
+        &__title{
+            color: &title;
+            padding: 15px 0 20px;
+        }
+        &__price{
+            display: flex;
+            justify-content: center;
+            @extend %roboto-400;
+            &-new{
+                padding: 0 12px;
+                color: $title;
+            }
+            &-old{
+                padding: 0 12px;
+                text-decoration: line-through;
+            }
+        }
+        &--sale{
+            .product-item__img-box::before{
+                content: 'SALE';
+                @extend %btn;
+                position: absolute;
+                top: 20px;
+                left: 25px;
+            }
+        }
+    }
+    .star{
+        margin: 0 auto;
     }
 }
 
