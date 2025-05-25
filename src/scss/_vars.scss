@@ -37,6 +37,14 @@ $bg: #f6f6f6;
     box-shadow: 0 7px 20px 0 rgba(255, 17, 48, 0.3);
     cursor: pointer;
 }
+ 
+
+%checkbox-hidden{
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect (0 0 0 0);
+}
 
 @function max($numbers...) {
   @return m#{a}x(#{$numbers});
